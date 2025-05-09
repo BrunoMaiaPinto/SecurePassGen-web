@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>🔐 SecurePassGen</h1>
+        <h2>Simple & Secure Password Generator</h2>
+        <div class="password-display">
+          <input class="password-input" id="hashs" readonly />
+          <button class="btn-copy" id="copy-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="length-control">
+          <label for="range_1"
+            >Length: <span id="range_1_value">16</span></label
+          >
+          <div>
+            <input
+              type="range"
+              name="range_1"
+              id="range_1"
+              min="8"
+              max="32"
+              value="16"
+            />
+          </div>
+        </div>
+        <div class="options">
+          <div class="checkboxs">
+            <label for="option_1">Uppercase (A-Z)</label>
+            <input type="checkbox" name="option_1" id="option_1" checked />
+          </div>
+
+          <div class="checkboxs">
+            <label for="option_2">Lowercase (a-z)</label>
+            <input type="checkbox" name="option_2" id="option_2" />
+          </div>
+
+          <div class="checkboxs">
+            <label for="option_3">Numbers (0-9) </label>
+            <input type="checkbox" name="option_3" id="option_3" checked />
+          </div>
+
+          <div class="checkboxs">
+            <label for="option_4">Symbols (!@#$%)</label>
+            <input type="checkbox" name="option_4" id="option_4" />
+          </div>
+        </div>
+
+        <button class="btn-reset" id="reset_options">
+          Generate New Password
+        </button>
+      </div>
+    </div>
+    <footer class="footer">
+      Copyright &copy; <span class="year"></span> by
+      <a
+        href="https://brunopinto.netlify.app/"
+        target="_blank"
+        class="footer__link"
+        >Bruno Pinto</a
+      >. All rights reserved.
+    </footer>
+  </body>
+</html>
