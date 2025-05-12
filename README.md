@@ -18,3 +18,5 @@ https://securepassgen-web.netlify.app/
 💡 Built with HTML, CSS, and JavaScript
 
 📱 Responsive and mobile-friendly
+
+Based on/Copied from/inpired from https://youtu.be/aR2Yi4f8a-E?si=76vHnVszebhHZ1P4
