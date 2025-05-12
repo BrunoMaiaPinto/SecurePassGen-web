@@ -41,13 +41,11 @@ function generateHashs() {
   const charactersString = characters.join("");
   const charactersLength = charactersString.length;
 
-  let hash = "";
-  for (j = 0; j < hashLength; j++) {
-    hash += charactersString.charAt(
-      Math.floor(Math.random() * charactersLength)
-    );
+  let password = "";
+  for (i = 0; i < hashLength; i++) {
+    password += charactersString[Math.floor(Math.random() * charactersLength)];
   }
-  hashs.value = hash;
+  hashs.value = password;
 }
 
 generateHashs();
