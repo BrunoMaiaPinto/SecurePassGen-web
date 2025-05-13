@@ -32,7 +32,7 @@ reset_options.addEventListener("click", () => {
 function generateHashs() {
   const characters = [];
   if (option_1.checked) characters.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  if (option_2.checked) characters.push("abcdefghijklmnopqrstuvxz");
+  if (option_2.checked) characters.push("abcdefghijklmnopqrstuvwxyz");
   if (option_3.checked) characters.push("0123456789");
   if (option_4.checked) characters.push("!@#$%^&*()_+[]{}|;':,.<>?");
 
@@ -41,11 +41,12 @@ function generateHashs() {
   const charactersString = characters.join("");
 
   let password = "";
-  for (i = 0; i < hashLength; i++) {
+  for (let i = 0; i < hashLength; i++) {
     password +=
       charactersString[Math.floor(Math.random() * charactersString.length)];
   }
-  hashs.value = password;
+
+  hashs.value = characters.length === 0 ? "" : password;
 }
 
 generateHashs();
